@@ -43,15 +43,5 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["Pre-sorted", "Random", "Reverse-sorted"],
         datasets: [selectionSortGraph, bubbleSortGraph, insertionSortGraph]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                stacked: false,
-            }],
-            xAxes: [{
-                stacked: false,
-            }],
-        }
     }
 });
