@@ -1,4 +1,4 @@
-var viewport = document.getElementById("ItemB");
+var viewport = document.getElementById("ItemB2");
 var ctx = viewport.getContext("2d");
 
 // var viewport2 = document.getElementById("myChart2");
