@@ -218,10 +218,10 @@ function radixInsertionSort (arr) {
 
 var MStime;
 function mergeSort(list){
-  MStime = 0;
-  if(list.length>2)
-    mergeSortMain(list);
-  return MStime;
+    MStime = 0;
+    if(list.length>2)
+        mergeSortMain(list);
+    return MStime;
 }
 
 function mergeSortMain(arr){
@@ -236,35 +236,35 @@ function mergeSortMain(arr){
 }
 
 function merge(left, right){
-  var result = [];
+    var result = [];
 
-  while (left.length && right.length) {
-      if (left[0] <= right[0]) {
-          result.push(left.shift());
-      } else {
-          result.push(right.shift());
-      }
-      MStime++;
-  }
+    while (left.length && right.length) {
+        if (left[0] <= right[0]) {
+            result.push(left.shift());
+        } else {
+            result.push(right.shift());
+        }
+        MStime++;
+    }
 
-  while (left.length){
-      result.push(left.shift());
-      MStime++;
-  }
+    while (left.length){
+        result.push(left.shift());
+        MStime++;
+    }
 
-  while (right.length){
-      result.push(right.shift());
-      MStime++;
-  }
+    while (right.length){
+        result.push(right.shift());
+        MStime++;
+    }
 
-  return result;
+    return result;
 }
 
 var QStime = 0;
 function quickSort(list){
-  QStime = 0;
-  quicksort(list);
-  return QStime;
+    QStime = 0;
+    quicksort(list);
+    return QStime;
 }
 
 function quicksort(arr){
