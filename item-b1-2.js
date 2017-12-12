@@ -1,23 +1,24 @@
-var viewport = document.getElementById("ItemB1");
+var viewport = document.getElementById("ItemB1-2");
 var ctx = viewport.getContext("2d");
 
-list = generateRandomArr(8, 100)
+// var viewport2 = document.getElementById("myChart2");
+// var ctx2 = viewport2.getContext("2d");
 
-list1 = list.slice().sort(function(a,b){
-            return a - b
-        });
-list2 = shuffle(list.slice());
-list3 = list.slice().sort(function(a,b){
-            return b - a
-        });
+list1 = generateRandomArr(50, 1000)
+list2 = generateRandomArr(100, 1000)
+list3 = generateRandomArr(150, 1000)
+
+list1 = shuffle(list1)
+list2 = shuffle(list2)
+list3 = shuffle(list3)
 
 var gaps = [1];
 
-console.log("RANDOM");
 var shellSortGraph = {
-    label: 'Shell Sort with Random Gaps',
+    label: 'Shell Sort',
     fill: false,
     data: [
+            {x: 0, y: 0},
             {x: 0, y: shellSort(list1.slice(), gaps)},
             {x: 0, y: shellSort(list2.slice(), gaps)},
             {x: 0, y: shellSort(list3.slice(), gaps)},
@@ -30,6 +31,7 @@ var insertionSortGraph = {
     label: 'Insertion Sort',
     fill: false,
     data: [
+            {x: 0, y: 0},
             {x: 0, y: insertionSort(list1.slice())},
             {x: 0, y: insertionSort(list2.slice())},
             {x: 0, y: insertionSort(list3.slice())},
@@ -41,7 +43,7 @@ var insertionSortGraph = {
 var chartData = {
     type: 'line',
     data: {
-        labels: ["Pre-sorted", "Random", "Reverse-sorted"],
+        labels: [0, list1.length, list2.length, list3.length],
         datasets: [shellSortGraph, insertionSortGraph]
     }
 }

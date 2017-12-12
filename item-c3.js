@@ -1,15 +1,20 @@
-var viewport = document.getElementById("ItemC");
+var viewport = document.getElementById("ItemC-3");
 var ctx = viewport.getContext("2d");
 
-list = generateRandomArr(8, 100)
+list1 = generateRandomArr(50, 1000)
+list2 = generateRandomArr(100, 1000)
+list3 = generateRandomArr(150, 1000)
 
-list1 = list.slice().sort(function(a,b){
-            return a - b
-        });
-list2 = shuffle(list.slice());
-list3 = list.slice().sort(function(a,b){
-            return b - a
-        });
+list1.sort(function(a,b){
+    return b-a;
+});
+list2.sort(function(a,b){
+    return b-a;
+});
+list3.sort(function(a,b){
+    return b-a;
+});
+
 
 var bucketSize = generateRandomNumber(20,100);
 label1 = bucketSize + " bucket size"
@@ -17,6 +22,7 @@ var bucketSortGraph1 = {
     label: label1,
     fill: false,
     data: [
+            {x: 0, y: 0},
             {x: 0, y: bucketSort(list1.slice(), bucketSize)},
             {x: 0, y: bucketSort(list2.slice(), bucketSize)},
             {x: 0, y: bucketSort(list3.slice(), bucketSize)},
@@ -30,6 +36,7 @@ var bucketSortGraph2 = {
     label: label2,
     fill: false,
     data: [
+            {x: 0, y: 0},
             {x: 0, y: bucketSort(list1.slice(), bucketSize)},
             {x: 0, y: bucketSort(list2.slice(), bucketSize)},
             {x: 0, y: bucketSort(list3.slice(), bucketSize)},
@@ -44,6 +51,7 @@ var bucketSortGraph3 = {
     label: label3,
     fill: false,
     data: [
+            {x: 0, y: 0},
             {x: 0, y: bucketSort(list1.slice(), bucketSize)},
             {x: 0, y: bucketSort(list2.slice(), bucketSize)},
             {x: 0, y: bucketSort(list3.slice(), bucketSize)},
@@ -56,10 +64,9 @@ var bucketSortGraph3 = {
 var chartData = {
     type: 'line',
     data: {
-        labels: ["Pre-sorted", "Random", "Reverse-sorted"],
+        labels: [0, list1.length, list2.length, list3.length],
         datasets: [bucketSortGraph1, bucketSortGraph2, bucketSortGraph3]
     }
 }
 
 var myChart = new Chart(ctx, chartData);
-// var myChart2 = new Chart(ctx2, chartData);

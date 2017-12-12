@@ -1,20 +1,87 @@
 <html>
 <body>
-<div style="width: 45%; height: 50%; float:left; margin: 2.5%">
-    <canvas id="ItemA" width="80px" height="50px"></canvas>
+
+<h1 style="margin-bottom: -1.5%;">Selection sort vs. Insertion sort vs. Bubble sort</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Pre-sorted</h2>
+    <canvas id="ItemA1" width="80px" height="50px"></canvas>
 </div>
-<div style="width: 45%; height: 50%; float:left; margin: 2.5%">
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemA2" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Reverse-sorted</h2>
+    <canvas id="ItemA3" width="80px" height="50px"></canvas>
 </div>
 
-<div style="width: 45%; height: 50%; float:left; margin: 2.5%">
-    <canvas id="ItemB1" width="80px" height="50px"></canvas>
+<h1 style="margin-bottom: -1.5%;">Shell Sort with Insertion vs. Insertion Sort</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Pre-sorted</h2>
+    <canvas id="ItemB1-1" width="80px" height="50px"></canvas>
 </div>
-<div style="width: 45%; height: 50%; float:left; margin: 2.5%">
-    <canvas id="ItemB2" width="80px" height="50px"></canvas>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemB1-2" width="80px" height="50px"></canvas>
 </div>
-<div style="width: 45%; height: 50%; float:left; margin: 2.5%">
-    <canvas id="ItemC" width="80px" height="50px"></canvas>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Reverse-sorted</h2>
+    <canvas id="ItemB1-3" width="80px" height="50px"></canvas>
 </div>
+
+
+<h1 style="margin-bottom: -1.5%;">Shell Sort with Ciura Gaps vs. Shell Sort with Random Gaps</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Pre-sorted</h2>
+    <canvas id="ItemB2-1" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemB2-2" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Reverse-sorted</h2>
+    <canvas id="ItemB2-3" width="80px" height="50px"></canvas>
+</div>
+
+<h1 style="margin-bottom: -1.5%;">Bucket Sort with Random Distribution</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Pre-sorted</h2>
+    <canvas id="ItemC-1" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemC-2" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Reverse-sorted</h2>
+    <canvas id="ItemC-3" width="80px" height="50px"></canvas>
+</div>
+
+<h1 style="margin-bottom: -1.5%;">Radix Counting Sort vs. Radix Insertion Sort</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Pre-sorted</h2>
+    <canvas id="ItemD-1" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemD-2" width="80px" height="50px"></canvas>
+</div>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Reverse-sorted</h2>
+    <canvas id="ItemD-3" width="80px" height="50px"></canvas>
+</div>
+
+<h1 style="margin-bottom: -1.5%;">Merge Sort vs. Quick Sort</h1>
+<div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemE-1" width="80px" height="50px"></canvas>
+</div>
+<!-- <div style="width: 30%; height: 50%; float:left; margin: 1.5%">
+    <h2>Randomly-sorted</h2>
+    <canvas id="ItemE-2" width="80px" height="50px"></canvas>
+</div> -->
+<!--
 <div style="width: 45%; height: 50%; float:left; margin: 2.5%">
 </div>
 <div style="width: 45%; height: 50%; float:left; margin: 2.5%">
@@ -24,15 +91,33 @@
 </div>
 <div style="width: 45%; height: 50%; float:left; margin: 2.5%">
     <canvas id="ItemE" width="80px" height="50px"></canvas>
-</div>
+</div> -->
 </body>
 <script src="Chart.js" type="text/javascript"></script>
 <script src="utility.js" type="text/javascript"></script>
 <script src="sorting.js" type="text/javascript"></script>
-<script src="item-a.js" type="text/javascript"></script>
-<script src="item-b1.js" type="text/javascript"></script>
-<script src="item-b2.js" type="text/javascript"></script>
-<script src="item-c.js" type="text/javascript"></script>
-<script src="item-d.js" type="text/javascript"></script>
-<script src="item-e.js" type="text/javascript"></script>
+
+<script src="item-a1.js" type="text/javascript"></script>
+<script src="item-a2.js" type="text/javascript"></script>
+<script src="item-a3.js" type="text/javascript"></script>
+
+<script src="item-b1-1.js" type="text/javascript"></script>
+<script src="item-b1-2.js" type="text/javascript"></script>
+<script src="item-b1-3.js" type="text/javascript"></script>
+
+<script src="item-b2-1.js" type="text/javascript"></script>
+<script src="item-b2-2.js" type="text/javascript"></script>
+<script src="item-b2-3.js" type="text/javascript"></script>
+
+<script src="item-c1.js" type="text/javascript"></script>
+<script src="item-c2.js" type="text/javascript"></script>
+<script src="item-c3.js" type="text/javascript"></script>
+
+
+<script src="item-d1.js" type="text/javascript"></script>
+<script src="item-d2.js" type="text/javascript"></script>
+<script src="item-d3.js" type="text/javascript"></script>
+
+<script src="item-e1.js" type="text/javascript"></script>
+<!-- <script src="item-e2.js" type="text/javascript"></script> -->
 </html>
