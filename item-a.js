@@ -1,8 +1,11 @@
-var viewport = document.getElementById("myChart");
+var viewport = document.getElementById("ItemA");
 var ctx = viewport.getContext("2d");
 
+// var viewport2 = document.getElementById("myChart2");
+// var ctx2 = viewport2.getContext("2d");
+
 list1 = [1, 2, 3, 4, 5, 6, 7, 8]
-list2 = [1, 3, 2, 7, 9, 8, 5, 4]
+list2 = [1, 3, 5, 7, 9, 8, 2, 4]
 list3 = [8, 7, 6, 5, 4, 3, 2, 1]
 
 var selectionSortGraph = {
@@ -36,12 +39,16 @@ var insertionSortGraph = {
             {x: 0, y: insertionSort(list3.slice())},
     ],
     borderColor: ['rgba(99,132,255,1)'],
+    borderWidth: 6
 }
 
-var myChart = new Chart(ctx, {
+var chartData = {
     type: 'line',
     data: {
         labels: ["Pre-sorted", "Random", "Reverse-sorted"],
         datasets: [selectionSortGraph, bubbleSortGraph, insertionSortGraph]
     }
-});
+}
+
+var myChart = new Chart(ctx, chartData);
+// var myChart2 = new Chart(ctx2, chartData);

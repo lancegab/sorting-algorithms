@@ -52,3 +52,24 @@ function insertionSort(unsortedList) {
 
     return comparison;
 }
+
+function shellSort(array, gaps) {
+    var countOuter = 0;
+    var countInner = 0;
+    var countSwap = 0;
+
+    for(var g = 0; g < gaps.length; g++) {
+        var gap = gaps[g];
+        for(var i = gap; i < array.length; i++) {
+            countOuter++;
+            var temp = array[i];
+            for(var j = i; j >= gap && array[j - gap] > temp; j -= gap) {
+                countInner++;
+                countSwap++;
+                array[j] = array[j - gap];
+            }
+            array[j] = temp;
+        }
+    }
+  return countInner;
+}
